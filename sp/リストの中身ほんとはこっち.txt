@@ -1,0 +1,7 @@
+<?php
+foreach($menu_images as $i){
+?>
+>---<li><a href="./index.php?sean=<?php echo $i['group']?>"><img src="../images/<?php echo $i['image']?>" style="width:200px;"><p><?php echo $i['title']?></p></a></li>
+<?php
+}
+?>
