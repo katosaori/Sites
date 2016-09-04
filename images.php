@@ -28,7 +28,11 @@ header {
 }
 
 .main{
-	margin-top:-100px;
+	margin-top:100px;
+}
+.pool{
+	text-align:center;
+	margin-bottom:30px;
 }
 .mail_icon{
 	margin-left:30px;
@@ -148,6 +152,9 @@ foreach($group_array as $id => $rec){
 
 </div>
 <div class="clearleft"></div>
+<div class="pool">
+<img src="./menu/sptop_pool.png" style="width:500px;">
+</div>
 <div class="main">
 
 <div class="right">
