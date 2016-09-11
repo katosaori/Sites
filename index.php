@@ -14,6 +14,7 @@
 /************************************************************
 html body area
 *************************************************************/
+//master test
 html {
 	font-family:'Lucida Grande','Hiragino Kaku Gothic ProN',
 	Meiryo, sans-serif;
