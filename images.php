@@ -153,7 +153,11 @@ foreach($group_array as $id => $rec){
 </div>
 <div class="clearleft"></div>
 <div class="pool">
-<img src="./menu/sptop_pool.png" style="width:500px;">
+<?php 
+if($select_sean=="pool"){
+echo '<img src="./menu/sptop_pool.png" style="width:500px;">';
+}
+?>
 </div>
 <div class="main">
 
