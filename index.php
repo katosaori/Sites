@@ -7,7 +7,7 @@
 <link rel="stylesheet"href="owl-carousel/owl.theme.css">
 <link rel="stylesheet" type="text/css" href="./css/header.css" media="all">
 <link rel="stylesheet" href="css/jquery.flipster.min.css">
-<script src="js/jquery-1.11.0.min.js"></script>
+<<script src="js/jquery-1.11.0.min.js"></script>
 <script src="js/jquery.flipster.min.js"></script>
 <meta charset="UTF-8">
 <style type="text/css">
@@ -318,7 +318,7 @@ $group = get_by_group();
 	</div>
 	<div class="pasu_box">
 		<a href="" class="pasu_boxa">
-			<a href="images.php?sean=pool"><img src="./images/pool01.jpg"></a>
+		<iframe width="300" height="180" src="https://www.youtube.com/embed/iwq_vil4Q_g" frameborder="0" allowfullscreen></iframe>
 		<p>プール</p>
 		</a>
 		<a href="" class="pasu_boxa">
@@ -393,11 +393,11 @@ $group = get_by_group();
 		<a href="./blogs/blog1.php">
 		<div class="teヒメヤママユ">
 			<div class="block">
-				<p>ヒメヤママユ蛾の標本</p>
+				<p></p>
 			</div>
 			<div class="contents">
 				<img src="../blogimg/blog1.jpg" width="100px">
-				<p>ヒメヤママユの標本...</p>
+				<p></p>
 			</div>
 		</div>
 		</a>
@@ -427,5 +427,6 @@ $group = get_by_group();
 
 </div>
 </body>
+
 </html>
 
