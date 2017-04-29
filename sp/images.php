@@ -4,9 +4,9 @@
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
 
 <link rel="stylesheet" href="../sidr/stylesheets/jquery.sidr.light.css">
-<link rel="stylesheet" href="../sidr/stylesheets/jquery.sidr.light.css">
+<link type="text/css" rel="stylesheet" href="css/lightslider.css" />  
 <link href="../css/jquery.bxslider.css" rel="stylesheet" />
-
+<script src="js/lightslider.js"></script>
 <script type="text/javascript" src="../js/jquery.bxslider.min.js"></script>
 <meta charset="UTF-8">
 <style type="text/css">
@@ -37,6 +37,7 @@ menu area
 	text-align:center;
 	float:left;
 	border:solid 1px transparent;
+	list-style-type: none;
 }
 
 .gym_menu {
@@ -63,12 +64,14 @@ menu area
 	height:100px;
 	border:solid 1px #000;
 	background-color:#000;
+
 }
 .top_menu ul{
 	margin-top:0px;
 	width:100%;
 	text-align:center;
 	background-color:#000;
+
 }
 
 .top_menu li {
@@ -78,15 +81,17 @@ menu area
 	float:left;
 	border-right:solid 1px #000;
 	text-align:center;
+	list-style-type: none;
+}
+.top_menu li a {
+	text-decoration: none;
 	color:#FFF;
 }
 .top_menu p{
 	font-size: 4em;
 	margin-top:0px;
+	color:#FFF;
 
-}
-.top_menu a {
-	text-decoration: none;
 }
 
 p { font-family: 'Arial', 'Tahoma', sans-serif }
@@ -204,25 +209,37 @@ main area
 	margin-top:20px;
 	width:95%;
 }
+
+.showreel{
+	width:100%;
+	border:solid 1px transparent;
+}
 .items{
-	background:#ccc;
+
 }
 
 .item{
-	background: #fff;
+
 	height: 190px;
 	width: 190px;
-	border-radius: 50%;
-	-moz-border-radius: 50%;
-	-webkit-border-radius: 50%;
-	border:solid 1px transparent;
-	margin-left:30px;
-	margin-top:30px;
-	padding-top:30px;
 	float:left;
 }
 
+.button {
+    text-align:center;
+    padding:10px;
+    color:#fff;
+    background:#03A9F4;
+    width:200px;
+}
+.close {
+    background:#666;
+}
 
+.blankspace{	
+	border:solid 1px transparent;
+	height:300px;
+}
 
 </style>
 
@@ -261,6 +278,24 @@ $(function(){
 	});
 });
 
+$(function () {
+    $('.button').prevAll().hide();
+    $('.button').click(function () {
+        if ($(this).prevAll().is(':hidden')) {
+            $(this).prevAll().slideDown();
+            $(this).text('閉じる').addClass('close');
+        } else {
+            $(this).prevAll().slideUp();
+            $(this).text('もっと見る').removeClass('close');
+        }
+    });
+});
+
+</script>
+<script type="text/javascript">
+  $(document).ready(function() {
+    $("#lightSlider").lightSlider(); 
+  });
 </script>
 
 <?php
@@ -284,9 +319,9 @@ $seans_names=seans($select_sean);
 	<a href="#" class="page-top"><img src="../menu/oyaki.png"></a>
 	<div class="top_menu">
 		<ul>
-			<li><a href="./index.php"><p>トップ</p></a></li>
-			<li><p>パース</p></li>
-			<li><a href="./drawing.pho"><p>デッサン</p></a></li>
+			<li><a href="./index.php"><p><img src="../menu/title_white.png" height="90px"></p></a></li>
+			<li><p><img src="../menu/sp_pasu.png" height="90px"></p></li>
+			<li><a href="./drawing.php"><p><img src="../menu/sp_enpitu_mokutan.png" height="90px"></p></a></li>
 		</ul>
 	</div>
 
@@ -323,32 +358,79 @@ $seans_names=seans($select_sean);
 	<header>
 		<div class="menu">
 			<ul>
-				<li><a href="images.php?sean=gym"><img src="../menu/gym_off.png" ></a></li>
+				<li><a href="images.php?sean=gym"><img src="../menu/gym_off_d.png" ></a></li>
 				<li><a href="images.php?sean=home"><img src="../menu/home_off.png" ></a></li>
-				<li><a href="images.php?sean=hospital"><img src="../menu/hospital_off.png" ></a></li>
+				<li><a href="images.php?sean=hospital"><img src="../menu/hospital_off_d.png" ></a></li>
 				<li><a href="images.php?sean=school"><img src="../menu/school_off.png" ></a></li>
-				<li><a href="images.php?sean=pool"><img src="../menu/pool_off.png" ></a></li>
+				<li><a href="images.php?sean=pool"><img src="../menu/pool_off_d.png" ></a></li>
 			</ul>
 		</div>
 	</header>
 
 	<div class="mainpictures">
-	<?php
-		foreach($seans_names as $i){
-	?>
-	<img class="mainpicClass" src="../images/<?php echo $i['sean']?>" width="100%"  alt="img2_thumb" class="thumb" />
-	<?php
-	}?>
+		
+			<?php
+				
+				
+				$images_count = 0;
+				$seans_name_count = count($seans_names);
+				var_dump($seans_name_count);
+				foreach($seans_names as $i){
+					if ($images_count == 0){					
+					?>
+					<img class="mainpicClass" src="../images/<?php echo $i['sean']?>" width="100%"  alt="img2_thumb" class="thumb" />
+					 
+					<?php
+					 $images_count++;
+					}
+					else if($images_count == 1){
+					?>
+					<div class="content">
+					<img class="mainpicClass" src="../images/<?php echo $i['sean']?>" width="100%"  alt="img2_thumb" class="thumb" />
+					<?php
+					$images_count++;
+					 }
+					else if($images_count == 3){
+					?>
+					<img class="mainpicClass" src="../images/<?php echo $i['sean']?>" width="100%"  alt="img2_thumb" class="thumb" />
+					<p class="button">もっと見る1</p>
+					<?php
+					$images_count++;
+					}
+					elseif($images_count == 2){
+					 ?>
+					<img class="mainpicClass" src="../images/<?php echo $i['sean']?>" width="100%"  alt="img2_thumb" class="thumb" />
+					<?php
+					$images_count++;
+					}
+				}
+				 ?>
+			
+		</div>
+        <?php if($select_sean=='pool'){
+			echo '<div class="showreel"><img src="../menu/thumbnail_pool.png" width="100%"><iframe width="560" height="315" src="https://www.youtube.com/embed/vcst1rZQaTs" frameborder="0" allowfullscreen></iframe>';
+			}
+		?>
+		
+				
+			</div>
 		<div class="items">
+			<ul id="lightSlider">
 			<?php
 				foreach($images_names as $i){
 			?>
-			<div class="item">
-				<img class="lists" src="../img/<?php echo $i['image']?>" style="width:160px;">
-			</div>
+			
+  				<li>
+					<div class="item">
+						<img class="lists" src="../img/<?php echo $i['image']?>" style="width:160px;">
+					</div>
+			</li>
 			<?php
 			}
 			?>
+		</ul>
+		</div>
+		<div class ="blankspace">
 		</div>
 </div>
 </body>

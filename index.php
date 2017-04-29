@@ -7,7 +7,7 @@
 <link rel="stylesheet"href="owl-carousel/owl.theme.css">
 <link rel="stylesheet" type="text/css" href="./css/header.css" media="all">
 <link rel="stylesheet" href="css/jquery.flipster.min.css">
-<<script src="js/jquery-1.11.0.min.js"></script>
+<script src="js/jquery-1.11.0.min.js"></script>
 <script src="js/jquery.flipster.min.js"></script>
 <meta charset="UTF-8">
 <style type="text/css">
@@ -167,17 +167,17 @@ list-style-type: none;
 	position:absolute;
 }
 
-.add_left01{left:10px;top:-10px;}
-.add_left02{left:137px;top:-10px;}
-.add_left03{left:200px;top:-10px;}
-.add_left04{left:443px;top:-10px;}
+.add_left01{left:10px;top:-30px;}
+.add_left02{left:137px;top:-30px;}
+.add_left03{left:200px;top:-30px;}
+.add_left04{left:443px;top:-30px;}
  
  .content {
 	width:700px;
 	height:210px;
 	border:#6CC 5px solid;
 	background:#FFF;
-	top:170px;
+	top:180px;
 	padding:10px;
 	position:absolute;
 	z-index:100;
@@ -302,11 +302,11 @@ $group = get_by_group();
 			<div class="content">
 				<div class="triangle add_left03"></div>
 				<ul>
-				<li><img src="./menu/list_thumb/dessan_1_s.jpg" width="100"></li>
-				<li><img src="./menu/list_thumb/dessan_2_s.jpg" width="100"></li>
-				<li><img src="./menu/list_thumb/dessan_3_s.jpg" width="100"></li>
-				<li><img src="./menu/list_thumb/dessan_4_s.jpg" width="100"></li>
-				<li><img src="./menu/list_thumb/dessan_5_s.jpg" width="100"></li>
+				<li><a href="./drawing.php"><img src="./menu/list_thumb/dessan_1_s.jpg" width="100"></a></li>
+				<li><a href="./drawing.php"><img src="./menu/list_thumb/dessan_2_s.jpg" width="100"></a></li>
+				<li><a href="./drawing.php"><img src="./menu/list_thumb/dessan_3_s.jpg" width="100"></a></li>
+				<li><a href="./drawing.php"><img src="./menu/list_thumb/dessan_4_s.jpg" width="100"></a></li>
+				<li><a href="./drawing.php"><img src="./menu/list_thumb/dessan_5_s.jpg" width="100"></a></li>
 				</ul>
 			</div>
 		<li class="liposition04">その他</li>
@@ -319,6 +319,7 @@ $group = get_by_group();
 	<div class="pasu_box">
 		<a href="" class="pasu_boxa">
 		<iframe width="300" height="180" src="https://www.youtube.com/embed/iwq_vil4Q_g" frameborder="0" allowfullscreen></iframe>
+		<iframe width="300" height="180" src="https://www.youtube.com/embed/vcst1rZQaTs" frameborder="0" allowfullscreen></iframe>
 		<p>プール</p>
 		</a>
 		<a href="" class="pasu_boxa">
@@ -413,7 +414,7 @@ $group = get_by_group();
 			}
 	?>
 		<div class="block">
-			<p>タイトル</p>
+			<p>モデリング作例</p>
 		</div>
 		<div class="contents">
 			<img src="../menu/sample.jpeg" width="100px">

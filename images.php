@@ -155,7 +155,7 @@ foreach($group_array as $id => $rec){
 <div class="pool">
 <?php 
 if($select_sean=="pool"){
-echo '<img src="./menu/sptop_pool.png" style="width:500px;">';
+echo '<img src="./menu/thumbnail_pool.png" style="width:100%;">';
 }
 ?>
 </div>

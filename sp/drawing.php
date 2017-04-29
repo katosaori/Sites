@@ -37,6 +37,7 @@ menu area
 	text-align:center;
 	float:left;
 	border:solid 1px transparent;
+	list-style-type: none;
 }
 
 .menu li a{
@@ -58,6 +59,7 @@ menu area
 	height:100px;
 	border:solid 1px #000;
 	background-color:#000;
+	list-style-type: none;
 }
 .top_menu ul{
 	margin-top:0px;
@@ -74,16 +76,17 @@ menu area
 	border-right:solid 1px #000;
 	text-align:center;
 	color:#FFF;
+	list-style-type: none;
+}
+.top_menu li a {
+	text-decoration: none;
+	color:#FFF;
 }
 .top_menu p{
 	font-size: 4em;
 	margin-top:0px;
-
-}
-
-.top_menu li a {
-	text-decoration: none;
 	color:#FFF;
+
 }
 
 p{

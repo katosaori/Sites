@@ -37,6 +37,7 @@ menu area
 	text-align:center;
 	float:left;
 	border:solid 1px transparent;
+	list-style-type: none;
 }
 
 
@@ -83,6 +84,7 @@ menu area
 	border-right:solid 1px #000;
 	text-align:center;
 	color:#FFF;
+	list-style-type: none;
 }
 
 .top_menu li a {
@@ -156,9 +158,9 @@ toggle menu
  z-index:3;
 }
 #menu li{
- list-style-type: none;
+  list-style-type: none;
   background: #f5f5f5;/*リストの背景色*/
-   margin: 0 auto;
+  margin: 0 auto;
 }
 #menu li a {
  color: #444444;/*リストの文字色*/
@@ -180,10 +182,8 @@ toggle menu
 	padding:20px;
 	margin-left:30px;
 	background-color:#fff;
-	border:solid 1px #000;
-	border-radius: 10px;
-	-webkit-border-radius: 10px;
-	-moz-border-radius: 10px; 
+	border:solid 1px #ccc;
+
 }
 .block {
 	border: #ffb6c1 solid 1px;
@@ -364,14 +364,17 @@ $top_images=get_top_image($select_sean);
 		</div>
 	</header>
 	<img src="../img/zeri.png" width="100%">
+<?php
+	$file = file("makingmemos/makingmemo.html");
+?> 
 	<div class="textspace">
 	<div class="textsblock">
 		<div class="block">
-			<p>タイトル１</p>
+			<p><?php echo $file[1];?></p>
 		</div>
 		<div class="contents">
 			<img src="../menu/sample.jpeg" width="100px">
-			<p>トテキストテキストテキストテキストテキストテキストテキストキストテキストテキストテキストテキスト</p>
+			<p><?php echo $file[2];echo $file[3];echo $file[4];?></p>
 			<div class="clearLeft"></div>
 		</div>
 	</div>
