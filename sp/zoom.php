@@ -46,26 +46,27 @@ header {
 	width:100%;
 	margin:0px;
 	height:100px;
-	border:solid 1px #000;
-	background-color:#000;
+	border:solid 1px #6B5641;
+	background-color:#6B5641;
+
 }
 .top_menu ul{
 	margin-top:0px;
 	width:100%;
 	text-align:center;
-	background-color:#000;
+	background-color:#6B5641;
+
 }
 
 .top_menu li {
-	background-color:#000;
+	background-color:#6B5641;
 	width:30%;
 	height:100px;
 	float:left;
-	border-right:solid 1px #000;
+	border-right:solid 1px #6B5641;
 	text-align:center;
-	color:#FFF;
+	list-style-type: none;
 }
-
 .top_menu li a {
 	text-decoration: none;
 	color:#FFF;
@@ -76,6 +77,7 @@ header {
 	color:#FFF;
 
 }
+
 p { font-family: 'Arial', 'Tahoma', sans-serif }
 
 .menu-toggle{
@@ -130,10 +132,10 @@ $(function(){
 <body>
 <div class="main">
 	<div class="top_menu">
-		<ul style="list-style:none;">
-			<li><a href="./painting.php"><p>油絵</p></li>
-			<li><a href="./images.php"><p>パース</p></li>
-			<li><a href="./drawing.php"><p>デッサン</p></a></li>
+		<ul>
+			<li><a href="./index.php"><p><img src="../menu/title_white.png" height="90px"></p></a></li>
+			<li><p><img src="../menu/sp_pasu.png" height="90px"></p></li>
+			<li><a href="./drawing.php"><p><img src="../menu/sp_enpitu_mokutan.png" height="90px"></p></a></li>
 		</ul>
 	</div>
 

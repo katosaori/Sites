@@ -7,6 +7,7 @@
 <script src="./js/jquery.prettyPhoto.js" type="text/javascript" charset="utf-8"></script>
 <link rel="stylesheet" href="../sidr/stylesheets/jquery.sidr.light.css">
 <link rel="stylesheet" type="text/css" href="example.css">
+<link href="./css/topmenu.css" rel="stylesheet" />
 <meta charset="UTF-8">
 
 <style type="text/css">
@@ -22,6 +23,7 @@ body {
 	margin:0;
 	padding: 0;
 	background: #f0f0f0;
+
 }
 /************************************************************
 menu area
@@ -53,41 +55,7 @@ menu area
 	font-size:400%;
 }
 
-.top_menu{
-	width:100%;
-	margin:0px;
-	height:100px;
-	border:solid 1px #000;
-	background-color:#000;
-	list-style-type: none;
-}
-.top_menu ul{
-	margin-top:0px;
-	width:100%;
-	text-align:center;
-	background-color:#000;
-}
 
-.top_menu li {
-	background-color:#000;
-	width:30%;
-	height:100px;
-	float:left;
-	border-right:solid 1px #000;
-	text-align:center;
-	color:#FFF;
-	list-style-type: none;
-}
-.top_menu li a {
-	text-decoration: none;
-	color:#FFF;
-}
-.top_menu p{
-	font-size: 4em;
-	margin-top:0px;
-	color:#FFF;
-
-}
 
 p{
 	font-family: 'Arial', 'Tahoma', sans-serif
@@ -100,6 +68,23 @@ p{
 .top_img img{
 	width:80%;
 }
+
+.page-top {
+	width:300px;
+	position: fixed;
+	bottom: 60px;
+	right: 40px;
+	padding: 10px;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	font-size: 12px;
+}
+
+.page-top img{
+	width:300px;
+}
+
 .menu-toggle{
 	color: #000;/*MENUの文字色*/
 	display: block;
@@ -151,7 +136,7 @@ main area
 }
 .enpitsu{
 	width:100%;
-	padding:30px;
+
 	border:solid 1px transparent;
 }
 
@@ -187,18 +172,18 @@ $enpitsu_works=get_all_from_enpitsu();
 <div class="main">
 	<div class="top_menu">
 		<ul>
-			<li><a href="index.php"><p>トップ</p></a></li>
-			<li><p>油絵</p></li>
-			<li><a href="images.php"><p>パース</p></a></li>
+			<li><a href="index.php"><p><img src="../menu/title_white.png" height="90px"></p></a></li>
+			<li><a href="drawing.php"><p><img src="../menu/sp_enpitu_mokutan.png" height="90px"></p></li>
+			<li><a href="images.php"><p><img src="../menu/sp_pasu.png" height="90px"></p></a></li>
 		</ul>
 	</div>
 		<span class="menu-toggle"><i class="blogicon-reorder lg"></i>≡</span>
 		<ul id='menu'>
-		<li><a href='./zoom.php'><img src="../zoom/kabin.png" width="200px">かびん　おきもの</a></li>
-		<li><a href=''><img src="../img/kabuto.png" width="300px">でっさん</a></li>
-		<li><a href=''><img src="../img/mesukuwagata.png" width="300px">しゃしん</a></li>
-		<li><a href=''><img src="../zoom/okimono.png" width="200px">しゃしん２</a></li>
-		<li><a href=''><img src="../zoom/tsumayouji.png" width="200px">しゃしん３</a></li>
+		<li><a href=''><img src="../menu/tanabata1_1.png" width="150px">-----</a></li>
+		<li><a href=''><img src="../menu/tanabata1_2.png" width="150px">-----</a></li>
+		<li><a href=''><img src="../menu/tanabata1_3.png" width="150px">-----</a></li>
+		<li><a href=''><img src="../menu/tanabata1_4.png" width="150px">-----</a></li>
+		<li><a href=''><img src="../menu/tanabata1_1.png" width="150px">-----</a></li>
 		</ul>
 	<div class="clearLeft"></div>
 	<div class="enpitsu">

@@ -364,7 +364,9 @@ $group = get_by_group();
 <script>
     var coverflow = $("#coverflow").flipster();
 </script>
-
+	<div class="s_y_1">
+		<img src="./menu/sideview_pool.png" style="width:100%">
+	</div>
 	<div class="demo">
 		<ul class="komonos" style="list-style:none;">
 		<img class="lists" src="./img/tamamushi.png" style="width:100px;" >
@@ -405,7 +407,8 @@ $group = get_by_group();
 
 	<?php
 		$count=0;
-		foreach($record as $r){
+		/*foreach($record as $r){*/
+		for($i=0;$i<3;$i++){
 		if($count%4 == 0){
 			echo "<div class='clearleft'></div>";
 			echo "<div class='textsblock'>";
@@ -414,10 +417,10 @@ $group = get_by_group();
 			}
 	?>
 		<div class="block">
-			<p>モデリング作例</p>
+			<p>簡易プラネタリウム</p>
 		</div>
 		<div class="contents">
-			<img src="../menu/sample.jpeg" width="100px">
+			<img src="../images/17.png" width="100px">
 			<p><?php echo $r["message"] ?></p>
 		</div>
 	</div>

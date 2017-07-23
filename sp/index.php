@@ -6,6 +6,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="../sidr/stylesheets/jquery.sidr.light.css">
 <link href="../css/jquery.bxslider.css" rel="stylesheet" />
+<link href="./css/topmenu.css" rel="stylesheet" />
 	</div>
 
 <meata charset="UTF-8">
@@ -62,41 +63,7 @@ menu area
 	font-size:400%;
 }
 
-.top_menu{
-	width:100%;
-	margin:0px;
-	height:100px;
-	border:solid 1px #000;
-	background-color:#000;
-}
-.top_menu ul{
-	margin-top:0px;
-	width:100%;
-	text-align:center;
-	background-color:#000;
-}
 
-.top_menu li {
-	background-color:#000;
-	width:30%;
-	height:100px;
-	float:left;
-	border-right:solid 1px #000;
-	text-align:center;
-	color:#FFF;
-	list-style-type: none;
-}
-
-.top_menu li a {
-	text-decoration: none;
-	color:#FFF;
-}
-.top_menu p{
-	font-size: 4em;
-	margin-top:0px;
-	color:#FFF;
-
-}
 p { font-family: 'Arial', 'Tahoma', sans-serif }
 
 
@@ -213,7 +180,7 @@ main area
 }
 .main{
 	width:100%;
-	border:solid 1px #000;
+	border:solid 1px transparent;
 	margin:0px;
 	backgroud-color:#F0F;
 }
@@ -324,19 +291,19 @@ $top_images=get_top_image($select_sean);
 <div class="main">
 	<div class="top_menu">
 		<ul>
-			<li><p>油絵</p></li>
-			<li><p>パース</p></li>
-			<li><a href="./drawing.php"><p>デッサン</p></a></li>
+			<li><a href="index.php"><p><img src="../menu/title_white.png" height="90px"></p></a></li>
+			<li><a href="drawing.php"><p><img src="../menu/sp_enpitu_mokutan.png" height="90px"></p></li>
+			<li><a href="images.php"><p><img src="../menu/sp_pasu.png" height="90px"></p></a></li>
 		</ul>
 	</div>
 
 		<span class="menu-toggle"><i class="blogicon-reorder lg"></i>≡</span>
 		<ul id='menu'>
-		<li><a href='./zoom.php'><img src="../zoom/kabin.png" width="200px">かびん　おきもの</a></li>
-		<li><a href=''><img src="../img/kabuto.png" width="300px">でっさん</a></li>
-		<li><a href=''><img src="../img/mesukuwagata.png" width="300px">しゃしん</a></li>
-		<li><a href=''><img src="../zoom/okimono.png" width="200px">しゃしん２</a></li>
-		<li><a href=''><img src="../zoom/tsumayouji.png" width="200px">しゃしん３</a></li>
+		<li><a href=''><img src="../menu/tanabata1_1.png" width="150px">-----</a></li>
+		<li><a href=''><img src="../menu/tanabata1_2.png" width="150px">-----</a></li>
+		<li><a href=''><img src="../menu/tanabata1_3.png" width="150px">-----</a></li>
+		<li><a href=''><img src="../menu/tanabata1_4.png" width="150px">-----</a></li>
+		<li><a href=''><img src="../menu/tanabata1_1.png" width="150px">-----</a></li>
 		</ul>
 
 
@@ -346,8 +313,9 @@ $top_images=get_top_image($select_sean);
 	<ul class="bxslider">
 		<li><img src="../images/01.jpg" /></li>
 		<li><img src="../images/02.jpg" /></li>
-		<li><img src="../images/03.jpg" /></li>
+		<li><img src="../images/03.jpg"  width="100%"/></li>
 		<li><img src="../images/04.jpg" /></li>
+		<li><img src="../images/05.png"  width="100%"/></li>
 	</ul>
 
 	</div>
@@ -359,7 +327,7 @@ $top_images=get_top_image($select_sean);
 				<li><a href="./images.php?sean=hospital"><img src="../menu/hospital_off.png" ></a></li>
 				<li><a href="./images.php?sean=school"><img src="../menu/school_off.png" ></a></li>
 				<li><a href="./images.php?sean=pool"><img src="../menu/pool_off.png" ></a></li>
-				<li><a href="./spkomono.php"><img class="rotate" src="../img/osukuwagata.png" ></a></li>
+				<li><a href=""><img class="rotate" src="../img/osukuwagata.png" ></a></li>
 			</ul>
 		</div>
 	</header>
@@ -370,7 +338,7 @@ $top_images=get_top_image($select_sean);
 	<div class="textspace">
 	<div class="textsblock">
 		<div class="block">
-			<p><?php echo $file[1];?></p>
+			<a href="./memo.php"><p><?php echo $file[1];?></p></a>
 		</div>
 		<div class="contents">
 			<img src="../menu/sample.jpeg" width="100px">

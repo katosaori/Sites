@@ -7,6 +7,7 @@
 <meta name=“viewport” content=“initial-scale=1”>
 <link rel="stylesheet" href="../sidr/stylesheets/jquery.sidr.light.css">
 <link href="../css/jquery.bxslider.css" rel="stylesheet" />
+<link href="./css/topmenu.css" rel="stylesheet" />
 	</div>
 
 <meata charset="UTF-8">
@@ -62,40 +63,7 @@ menu area
 	font-size:400%;
 }
 
-.top_menu{
-	width:100%;
-	margin:0px;
-	height:100px;
-	border:solid 1px transparent;
-	background-color:#000;
-}
-.top_menu ul{
-	margin-top:0px;
-	width:100%;
-	text-align:center;
-	background-color:#000;
-}
 
-.top_menu li {
-	background-color:#000;
-	width:30%;
-	height:100px;
-	float:left;
-	border-right:solid 1px #000;
-	text-align:center;
-	color:#FFF;
-}
-
-.top_menu li a {
-	text-decoration: none;
-	color:#FFF;
-}
-.top_menu p{
-	font-size: 4em;
-	margin-top:0px;
-	color:#FFF;
-
-}
 p { font-family: 'Arial', 'Tahoma', sans-serif }
 
 
@@ -369,9 +337,9 @@ if (!mb_send_mail("alps.sha@i.softbank.jp", $_POST["subject"], $message_, "From:
 <div class="main">
 	<div class="top_menu">
 		<ul>
-			<li><p>油絵</p></li>
-			<li><p>パース</p></li>
-			<li><a href="./drawing.php"><p>デッサン</p></a></li>
+			<li><a href="index.php"><p><img src="../menu/title_white.png" height="90px"></p></a></li>
+			<li><a href="drawing.php"><p><img src="../menu/sp_enpitu_mokutan.png" height="90px"></p></li>
+			<li><a href="images.php"><p><img src="../menu/sp_pasu.png" height="90px"></p></a></li>
 		</ul>
 	</div>
 

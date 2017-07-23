@@ -6,10 +6,12 @@
 <link rel="stylesheet" href="../sidr/stylesheets/jquery.sidr.light.css">
 <link type="text/css" rel="stylesheet" href="css/lightslider.css" />  
 <link href="../css/jquery.bxslider.css" rel="stylesheet" />
+<link href="./css/topmenu.css" rel="stylesheet" />
 <script src="js/lightslider.js"></script>
 <script type="text/javascript" src="../js/jquery.bxslider.min.js"></script>
 <meta charset="UTF-8">
 <style type="text/css">
+
 /************************************************************
 html body area
 *************************************************************/
@@ -58,41 +60,7 @@ menu area
 	font-size:400%;
 }
 
-.top_menu{
-	width:100%;
-	margin:0px;
-	height:100px;
-	border:solid 1px #000;
-	background-color:#000;
 
-}
-.top_menu ul{
-	margin-top:0px;
-	width:100%;
-	text-align:center;
-	background-color:#000;
-
-}
-
-.top_menu li {
-	background-color:#000;
-	width:30%;
-	height:100px;
-	float:left;
-	border-right:solid 1px #000;
-	text-align:center;
-	list-style-type: none;
-}
-.top_menu li a {
-	text-decoration: none;
-	color:#FFF;
-}
-.top_menu p{
-	font-size: 4em;
-	margin-top:0px;
-	color:#FFF;
-
-}
 
 p { font-family: 'Arial', 'Tahoma', sans-serif }
 
@@ -229,11 +197,20 @@ main area
     text-align:center;
     padding:10px;
     color:#fff;
-    background:#03A9F4;
-    width:200px;
+    background-image: url("../menu/mottomiru.png");
+    background-repeat: no-repeat;
+    width:300px;
+    height: 80px;
+    border:solid 1px transparent;
+    margin: 0 auto; 
 }
 .close {
     background:#666;
+}
+
+.footer{
+	border:solid 1px transparent;
+	margin-top:10px;
 }
 
 .blankspace{	
@@ -327,11 +304,11 @@ $seans_names=seans($select_sean);
 
 		<span class="menu-toggle"><i class="blogicon-reorder lg"></i>≡</span>
 		<ul id='menu'>
-		<li><a href='./zoom.php'><img src="../zoom/kabin.png" width="200px">かびん　おきもの</a></li>
-		<li><a href=''><img src="../img/kabuto.png" width="300px">でっさん</a></li>
-		<li><a href=''><img src="../img/mesukuwagata.png" width="300px">しゃしん</a></li>
-		<li><a href=''><img src="../zoom/okimono.png" width="200px">しゃしん２</a></li>
-		<li><a href=''><img src="../zoom/tsumayouji.png" width="200px">しゃしん３</a></li>
+		<li><a href=''><img src="../menu/tanabata1_1.png" width="150px">-----</a></li>
+		<li><a href=''><img src="../menu/tanabata1_2.png" width="150px">-----</a></li>
+		<li><a href=''><img src="../menu/tanabata1_3.png" width="150px">-----</a></li>
+		<li><a href=''><img src="../menu/tanabata1_4.png" width="150px">-----</a></li>
+		<li><a href=''><img src="../menu/tanabata1_1.png" width="150px">-----</a></li>
 		</ul>
 
 
@@ -408,7 +385,7 @@ $seans_names=seans($select_sean);
 			
 		</div>
         <?php if($select_sean=='pool'){
-			echo '<div class="showreel"><img src="../menu/thumbnail_pool.png" width="100%"><iframe width="560" height="315" src="https://www.youtube.com/embed/vcst1rZQaTs" frameborder="0" allowfullscreen></iframe>';
+			echo '<div class="showreel"><img src="../menu/thumbnail_pool.png" width="100%"><iframe width="560" height="315" src="https://www.youtube.com/embed/tI2TcMPRrWA" frameborder="0" allowfullscreen></iframe>';
 			}
 		?>
 		
@@ -430,6 +407,11 @@ $seans_names=seans($select_sean);
 			?>
 		</ul>
 		</div>
+			<div class="footer">
+				<a href="./mail.php" class="otoiawase"><img src="../menu/mail.png"></a>
+				<a href="./login.php" class="text"><img src="../menu/6ac59f87.gif" width="300px"></a>
+
+			</div>
 		<div class ="blankspace">
 		</div>
 </div>
