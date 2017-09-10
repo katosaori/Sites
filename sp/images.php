@@ -52,7 +52,7 @@ menu area
 }
 
 .menu li img{
-	width:300px;
+	width:280px;
 }
 
 .clearLeft{
@@ -304,7 +304,7 @@ $seans_names=seans($select_sean);
 
 		<span class="menu-toggle"><i class="blogicon-reorder lg"></i>≡</span>
 		<ul id='menu'>
-		<li><a href=''><img src="../menu/tanabata1_1.png" width="150px">-----</a></li>
+		<li><a href='./zoom.php'><img src="../menu/tanabata1_1.png" width="150px"><img src="../zoom/kabin.png" width="200px">かびん　おきもの</a></li>
 		<li><a href=''><img src="../menu/tanabata1_2.png" width="150px">-----</a></li>
 		<li><a href=''><img src="../menu/tanabata1_3.png" width="150px">-----</a></li>
 		<li><a href=''><img src="../menu/tanabata1_4.png" width="150px">-----</a></li>
@@ -335,11 +335,11 @@ $seans_names=seans($select_sean);
 	<header>
 		<div class="menu">
 			<ul>
-				<li><a href="images.php?sean=gym"><img src="../menu/gym_off_d.png" ></a></li>
-				<li><a href="images.php?sean=home"><img src="../menu/home_off.png" ></a></li>
-				<li><a href="images.php?sean=hospital"><img src="../menu/hospital_off_d.png" ></a></li>
-				<li><a href="images.php?sean=school"><img src="../menu/school_off.png" ></a></li>
-				<li><a href="images.php?sean=pool"><img src="../menu/pool_off_d.png" ></a></li>
+				<li><a href="images.php?sean=gym"><img src="../menu/imagepagebutton_gym.png"  ></a></li>
+				<li><a href="images.php?sean=home"><img src="../menu/imagepagebutton_home.png"  ></a></li>
+				<li><a href="images.php?sean=hospital"><img src="../menu/imagepagebutton_hos.png"  ></a></li>
+				<li><a href="images.php?sean=school"><img src="../menu/imagepagebutton_school.png"  ></a></li>
+				<li><a href="images.php?sean=pool"><img src="../menu/imagepagebutton_pool.png" ></a></li>
 			</ul>
 		</div>
 	</header>
@@ -351,7 +351,6 @@ $seans_names=seans($select_sean);
 				
 				$images_count = 0;
 				$seans_name_count = count($seans_names);
-				var_dump($seans_name_count);
 				foreach($seans_names as $i){
 					if ($images_count == 0){					
 					?>
@@ -385,7 +384,12 @@ $seans_names=seans($select_sean);
 			
 		</div>
         <?php if($select_sean=='pool'){
-			echo '<div class="showreel"><img src="../menu/thumbnail_pool.png" width="100%"><iframe width="560" height="315" src="https://www.youtube.com/embed/tI2TcMPRrWA" frameborder="0" allowfullscreen></iframe>';
+			echo '<div class="showreel" ><img src="../menu/thumbnail_pool.png" width="100%">
+			<p>プールの水で純氷をつくる話</p>
+			<p>〜モデリング(※一部のぞく)•ライティング•アニメーション•コンポジット</p>
+			<p>制作期間:9ヶ月ほど</p>
+			<p>使用ソフト:3dsmax aftereffects premire photoshop</p>
+			<a name="clip"><iframe width="560" height="315" src="https://www.youtube.com/embed/cJI7sYx8dZk" frameborder="0" allowfullscreen></iframe></a>';
 			}
 		?>
 		

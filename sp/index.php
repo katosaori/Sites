@@ -49,7 +49,7 @@ menu area
 	text-decoration: none;
 }
 .menu li img{
-	width:300px;
+	width:280px;
 }
 
 
@@ -142,6 +142,7 @@ toggle menu
 	border:solid 1px transparent;
 }
 .textsblock{
+	height:170px;
 	width:40%;
 	float:left;
 	margin-top:20px;
@@ -283,6 +284,7 @@ $menu_images=get_all();
 $images_names=get_komono($select_sean);
 $seans_names=seans($select_sean);
 $top_images=get_top_image($select_sean);
+$memo_array=memo();
 ?>
 
 </head>
@@ -322,11 +324,11 @@ $top_images=get_top_image($select_sean);
 	<header>
 		<div class="menu">
 			<ul>
-				<li><a href="./images.php?sean=gym"><img src="../menu/gym_off.png" ></a></li>
-				<li><a href="./images.php?sean=home"><img src="../menu/home_off.png" ></a></li>
-				<li><a href="./images.php?sean=hospital"><img src="../menu/hospital_off.png" ></a></li>
-				<li><a href="./images.php?sean=school"><img src="../menu/school_off.png" ></a></li>
-				<li><a href="./images.php?sean=pool"><img src="../menu/pool_off.png" ></a></li>
+				<li><a href="images.php?sean=gym"><img src="../menu/imagepagebutton_gym.png"  ></a></li>
+				<li><a href="images.php?sean=home"><img src="../menu/imagepagebutton_home.png"  ></a></li>
+				<li><a href="images.php?sean=hospital"><img src="../menu/imagepagebutton_hos.png"  ></a></li>
+				<li><a href="images.php?sean=school"><img src="../menu/imagepagebutton_school.png"  ></a></li>
+				<li><a href="images.php?sean=pool"><img src="../menu/imagepagebutton_pool.png" ></a></li>
 				<li><a href=""><img class="rotate" src="../img/osukuwagata.png" ></a></li>
 			</ul>
 		</div>
@@ -336,46 +338,18 @@ $top_images=get_top_image($select_sean);
 	$file = file("makingmemos/makingmemo.html");
 ?> 
 	<div class="textspace">
+	<?php for($i=0;$i<=3;$i++){?>
 	<div class="textsblock">
 		<div class="block">
-			<a href="./memo.php"><p><?php echo $file[1];?></p></a>
+			<a href="./memo.php"><p><?php echo $memo_array[$i]["memotitle"];?></p></a>
 		</div>
 		<div class="contents">
-			<img src="../menu/sample.jpeg" width="100px">
+			<img src="../memoimg/<?php echo $memo_array[$i]["mainimage"];?>" width="100px" height=="75px">
 			<p><?php echo $file[2];echo $file[3];echo $file[4];?></p>
 			<div class="clearLeft"></div>
 		</div>
 	</div>
-	<div class="textsblock">
-		<div class="block">
-			<p>タイトル2</p>
-		</div>
-		<div class="contents">
-			<img src="../menu/sample.jpeg" width="100px">
-			<p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
-			<div class="clearLeft"></div>
-		</div>
-	</div>
-	<div class="textsblock">
-		<div class="block">
-			<p>タイトル３</p>
-		</div>
-		<div class="contents">
-			<img src="../menu/sample.jpeg" width="100px">
-			<p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
-			<div class="clearLeft"></div>
-		</div>
-	</div>
-	<div class="textsblock">
-		<div class="block">
-			<p>タイトル４</p>
-		</div>
-		<div class="contents">
-			<img src="../menu/sample.jpeg" width="100px">
-			<p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
-			<div class="clearLeft"></div>
-		</div>
-	</div>
+	<?php }?>
 	</div>
 
 	<div class="clearLeft"></div>
@@ -386,7 +360,6 @@ $top_images=get_top_image($select_sean);
 <div class="footer">
 	<a href="./mail.php" class="otoiawase"><img src="../menu/mail.png"></a>
 	<a href="./login.php" class="text"><img src="../menu/6ac59f87.gif" width="300px"></a>
-
 </div>
 </div><!--オーバーレイおわり-->
 </body>

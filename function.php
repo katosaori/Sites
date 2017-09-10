@@ -192,4 +192,22 @@ function delete($title){
 function checkinsert($title,$message){
 		return true;
 }
+function memo(){
+	global $dbh;
+	$stmt_memo = $dbh -> prepare("select * from memo order by date desc");
+	$stmt_memo -> execute();
+	$stmt_memo -> bind_result($memotitle,$date,$mainimage,$filename);
+	$memo_array=array();
+	while($stmt_memo->fetch()){
+		$memo_array[] = array(
+			'memotitle'=>$memotitle,
+			'date'=>$date,
+			'mainimage'=>$mainimage,
+			'filename'=>$filename,
+		);
+	}
+	$stmt_memo->close();
+	return $memo_array;
+}
+
 
