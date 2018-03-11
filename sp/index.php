@@ -7,7 +7,8 @@
 <link rel="stylesheet" href="../sidr/stylesheets/jquery.sidr.light.css">
 <link href="../css/jquery.bxslider.css" rel="stylesheet" />
 <link href="./css/topmenu.css" rel="stylesheet" />
-	</div>
+<link href="./css/menu.css" rel="stylesheet" />
+<title>indexpage</title>
 
 <meata charset="UTF-8">
 <style type="text/css">
@@ -24,117 +25,53 @@ body {
 	padding: 0;
 	background: #f0f0f0;
 }
-/************************************************************
-menu area
-*************************************************************/
-.menu {
-	width:100%:
-}
-.menu li{
-	width:30%;
-	height:200px;
-	font-size:200%;
-	color:#000;
-	text-align:center;
-	float:left;
-	border:solid 1px transparent;
-	list-style-type: none;
-}
 
-
-.menu li a{
-	text-decoration: none;
-}
-#menu li a{
-	text-decoration: none;
-}
-.menu li img{
-	width:280px;
-}
-
-
-.rotate{
-	transform:rotate(-45deg);
-	width:200px;
-}
-
-.clearLeft{
-	clear:left;
-	font-size:400%;
-}
-
-
-p { font-family: 'Arial', 'Tahoma', sans-serif }
-
-
-.top_img {
-	text-align:center;
-}
-
-.top_img img{
-}
-
-.page-top {
-	width:300px;
-	position: fixed;
-	bottom: 60px;
-	right: 40px;
-	padding: 10px;
-	border-radius: 5px;
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	font-size: 12px;
-}
-
-.page-top img{
-	width:300px;
-}
 
 /***********************************************************
 toggle menu
 ************************************************************/
 
+
 #top-editarea{
  background: #dcdcdc;/*外側の背景*/
- text-align: right;/*MENUの文字の位置*/
- position: fixed;
- top: 0;
- width: 100%;
- z-index: 10;
+  text-align: right;/*MENUの文字の位置*/
+   position: fixed;
+    top: 0;
+	 width: 100%;
+	  z-index: 10;
 }
 #top-editarea .section{
  margin: 0;
-  width: 100%;
+   width: 100%;
 }
 .menu-toggle{
-	 color: #000;/*MENUの文字色*/
-	  display: block;
-	   padding: 5px;
-	   font-size: 4em;
-	margin-top:0px;
-
+		 color: #000;/*MENUの文字色*/
+		 	  display: block;
+			  	   padding: 5px;
+				   	   font-size: 4em;
+					   	margin-top:0px;
 }
 #menu {
  position:absolute;
- width:100%;
- background-color:#000;
- opacity: 0.9;
- display: none;
- padding: 0;
- margin: 0;
- z-index:3;
+  width:100%;
+   background-color:#000;
+    opacity: 0.9;
+	 display: none;
+	  padding: 0;
+	   margin: 0;
+	    z-index:3;
 }
 #menu li{
   list-style-type: none;
-  background: #f5f5f5;/*リストの背景色*/
-  margin: 0 auto;
+    background: #f5f5f5;/*リストの背景色*/
+	  margin: 0 auto;
 }
 #menu li a {
  color: #444444;/*リストの文字色*/
-  font-weight: bold;
-   display: block;
-    padding: 7px;
-	 text-align: left;/*リストの文字の位置*/
+   font-weight: bold;
+      display: block;
+	      padding: 7px;
+		  	 text-align: left;/*リストの文字の位置*/
 }
 
 .textspace{
@@ -159,20 +96,18 @@ toggle menu
 	padding: 0px;
 	background: #fff;
 }
+
+.block a{
+	text-decoration: none;
+	font-size: x-large;
+	color: #000;
+}
+
+
 .contents img{
 	float:left;
 }
 
-
-/************************************************************
-second area
-*************************************************************/
-
-.space{
-	margin-left:201px;
-	margin-top:60px;
-	width:70%;
-}
 /************************************************************
 main area
 *************************************************************/
@@ -228,7 +163,9 @@ main area
 	margin-top:10px;
 }
 
-
+.listbutton{
+	text-align:center;
+}
 </style>
 
 <script>
@@ -335,24 +272,32 @@ $memo_array=memo();
 	</header>
 	<img src="../img/zeri.png" width="100%">
 <?php
-	$file = file("makingmemos/makingmemo.html");
+
 ?> 
 	<div class="textspace">
-	<?php for($i=0;$i<=3;$i++){?>
+	<?php 		for($i=0;$i<=3;$i++){
+		$titlenum= 3-$i; ?>
 	<div class="textsblock">
 		<div class="block">
-			<a href="./memo.php"><p><?php echo $memo_array[$i]["memotitle"];?></p></a>
+			<a href="./spmemo/<?php echo $memo_array[$i]["filename"];?>"><p><?php echo $memo_array[$i]["memotitle"];?></p></a>
 		</div>
 		<div class="contents">
 			<img src="../memoimg/<?php echo $memo_array[$i]["mainimage"];?>" width="100px" height=="75px">
-			<p><?php echo $file[2];echo $file[3];echo $file[4];?></p>
+			<h4><?php $file = file("./spmemo/".$memo_array[$i]["filename"]); $memotitle= substr($file[10],8,30); $memotitle = mb_convert_encoding($memotitle,"EUC-JP", "auto");
+			echo $memotitle;?></h4>
 			<div class="clearLeft"></div>
 		</div>
 	</div>
-	<?php }?>
+	<?php 
+	}?>
+
+	
 	</div>
 
 	<div class="clearLeft"></div>
+	<div class="listbutton">
+		<a href="./contentslist.php"><img src="../menu/list2.png"></a>
+	</div>
 </div>
 
 

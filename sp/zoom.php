@@ -36,6 +36,7 @@ header {
 	widthi:60%;
 	margin-top:200px;
 	margin: 0 auto;
+	text-align:center;
 }
 
 .body{
@@ -149,6 +150,7 @@ $(function(){
 	</ul>
 
 	<div class="mainpicClass">
+		<img  src="../zoom/keiichi_title/keiichi_title1.png" width="80%"  alt=""  />
 		<img  src="../zoom/kabin.png" width="80%"  alt=""  />
 		<img  src="../zoom/kabin2.png" width="80%"  alt=""  />
 		<img  src="../zoom/okimono.png" width="80%"  alt=""  />
