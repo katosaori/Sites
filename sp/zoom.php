@@ -150,8 +150,14 @@ $(function(){
 	</ul>
 
 	<div class="mainpicClass">
+		<img  src="../zoom/keiichi_title/keiichi_titlesaimura.png" width="80%"  alt=""  />
+		<img  src="../zoom/keiichi_saimura_half.png" width="80%"  alt=""  />
+		<h5>加藤慶一 色鉛筆　50cmくらい</h5>
+
 		<img  src="../zoom/keiichi_title/keiichi_title1.png" width="80%"  alt=""  />
 		<img  src="../zoom/kabin.png" width="80%"  alt=""  />
+		<h5>加藤慶一 粘土?　30cmくらい</h5>
+
 		<img  src="../zoom/kabin2.png" width="80%"  alt=""  />
 		<img  src="../zoom/okimono.png" width="80%"  alt=""  />
 		<img  src="../zoom/okimono2.png" width="80%"  alt=""  />
